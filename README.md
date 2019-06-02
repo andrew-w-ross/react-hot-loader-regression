@@ -8,4 +8,4 @@ Open the page and change `src/Counter.js` text in the h2.
 All styling will be lost.
 
 Install `react-hot-loader@4.8.8` and relaunch the start task.
-Go back to `src/Counter.js` and the stling will remain.
+Go back to `src/Counter.js` and the stling will remain on update.
