@@ -1,22 +1,27 @@
-import React from 'react'
+import React, { useState } from "react";
+import Button from "@material-ui/core/Button";
+const Counter = () => {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <h1>Count is {count}</h1>
+      <h2>Change this text</h2>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => setCount(count + 1)}
+      >
+        +
+      </Button>
+      <Button
+        variant="contained"
+        color="secondary"
+        onClick={() => setCount(count - 1)}
+      >
+        -
+      </Button>
+    </div>
+  );
+};
 
-class Counter extends React.Component {
-  state = { count: 0 }
-
-  componentDidMount() {
-    this.interval = setInterval(
-      () => this.setState(prevState => ({ count: prevState.count + 1 })),
-      200,
-    )
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.interval)
-  }
-
-  render() {
-    return this.state.count
-  }
-}
-
-export default Counter
+export default Counter;
